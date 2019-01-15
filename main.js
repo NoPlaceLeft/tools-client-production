@@ -361,7 +361,7 @@ var AccountModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<form fxLayout=\"column\"\r\n      [formGroup]=\"form\"\r\n      (submit)=\"submit($event)\"\r\n      fxLayoutGap=\"24px\"\r\n      *ngIf=\"form\">\r\n    <h1>\r\n        {{'en_AccountDetails' | locale | async}}\r\n    </h1>\r\n    <mat-form-field>\r\n        <mat-label>\r\n            {{'en_Email' | locale | async}}\r\n        </mat-label>\r\n        <input matInput\r\n               formControlName=\"email\"\r\n               type=\"email\"\r\n               placeholder=\"name@example.com\"\r\n               required />\r\n\r\n        <mat-error *ngIf=\"form.controls.email.errors?.required\">\r\n            {{'errors.requiredField' | locale | async}}\r\n        </mat-error>\r\n\r\n        <mat-error *ngIf=\"form.controls.email.errors?.emailInUse\">\r\n            {{'errors.emailInUse' | locale | async}}\r\n        </mat-error>\r\n\r\n        <mat-error *ngIf=\"form.controls.email.errors?.pattern\">\r\n            {{'errors.emailFormat' | locale | async}}\r\n        </mat-error>\r\n    </mat-form-field>\r\n\r\n    <mat-form-field>\r\n        <mat-label>\r\n            {{'en_Username' | locale | async}}\r\n        </mat-label>\r\n        <input matInput\r\n               formControlName=\"username\"\r\n               type=\"text\"\r\n               autocomplete=\"off\" />\r\n\r\n        <mat-hint>\r\n            {{'messages.uniqueUsername' | locale | async}}\r\n        </mat-hint>\r\n\r\n        <mat-error *ngIf=\"form.controls.username.errors?.minlength\">\r\n            Minimum length is {{form.controls.username.errors?.minlength.requiredLength}} characters\r\n        </mat-error>\r\n\r\n        <mat-error *ngIf=\"form.controls.username.errors?.usernameInUse\">\r\n            {{'errors.usernameInUse' | locale | async}}\r\n        </mat-error>\r\n    </mat-form-field>\r\n\r\n    <hr />\r\n\r\n\r\n    <h1>\r\n        {{'en_ChangePassword' | locale | async}}\r\n    </h1>\r\n\r\n    <mat-form-field>\r\n        <mat-label>\r\n            {{'en_Password' | locale | async}}\r\n        </mat-label>\r\n        <input matInput\r\n               formControlName=\"password\"\r\n               autocomplete=\"off\"\r\n               type=\"password\" />\r\n\r\n        <mat-error *ngIf=\"form.controls.password.errors?.minlength\">\r\n            Minimum length is {{form.controls.password.errors?.minlength.requiredLength}} characters\r\n        </mat-error>\r\n    </mat-form-field>\r\n\r\n    <mat-form-field>\r\n        <mat-label>\r\n            {{'en_ConfirmPassword' | locale | async}}\r\n        </mat-label>\r\n        <input matInput\r\n               formControlName=\"confirm\"\r\n               type=\"password\"\r\n               autocomplete=\"off\"\r\n               [required]=\"form.get('password').value\" />\r\n\r\n        <mat-error *ngIf=\"form.controls.confirm.errors?.required\">\r\n            {{'errors.requiredField' | locale | async}}\r\n        </mat-error>\r\n\r\n        <mat-error *ngIf=\"form.controls.confirm.errors?.invalidPasswordMatch\">\r\n            {{'errors.passwordsDontMatch' | locale | async}}\r\n        </mat-error>\r\n\r\n        <mat-error *ngIf=\"form.controls.confirm.errors?.minlength\">\r\n            Minimum length is {{form.controls.confirm.errors?.minlength.requiredLength}} characters\r\n        </mat-error>\r\n    </mat-form-field>\r\n\r\n    <div fxLayout=\"row\"\r\n         fxLayoutGap=\"15px\"\r\n         *ngIf=\"form.dirty\">\r\n        <button mat-raised-button\r\n                color=\"primary\"\r\n                type=\"submit\"\r\n                [disabled]=\"isSaving\">{{'en_Save' | locale | async}}</button>\r\n        <a mat-button\r\n           color=\"primary\"\r\n           type=\"button\"\r\n           [routerLink]=\"['/tools']\">{{'en_Cancel' | locale | async}}</a>\r\n    </div>\r\n</form>\r\n"
+module.exports = "<form fxLayout=\"column\"\r\n      [formGroup]=\"form\"\r\n      (submit)=\"submit($event)\"\r\n      fxLayoutGap=\"24px\"\r\n      *ngIf=\"form\">\r\n    <h1>\r\n        {{'en_AccountDetails' | locale | async}}\r\n    </h1>\r\n    <mat-form-field>\r\n        <mat-label>\r\n            {{'en_Email' | locale | async}}\r\n        </mat-label>\r\n        <input matInput\r\n               formControlName=\"email\"\r\n               type=\"email\"\r\n               placeholder=\"name@example.com\"\r\n               required />\r\n\r\n        <mat-error *ngIf=\"form.controls.email.errors?.required\">\r\n            {{'errors.requiredField' | locale | async}}\r\n        </mat-error>\r\n\r\n        <mat-error *ngIf=\"form.controls.email.errors?.emailInUse\">\r\n            {{'errors.emailInUse' | locale | async}}\r\n        </mat-error>\r\n\r\n        <mat-error *ngIf=\"form.controls.email.errors?.pattern\">\r\n            {{'errors.emailFormat' | locale | async}}\r\n        </mat-error>\r\n    </mat-form-field>\r\n\r\n    <mat-form-field>\r\n        <mat-label>\r\n            {{'en_Username' | locale | async}}\r\n        </mat-label>\r\n        <input matInput\r\n               formControlName=\"username\"\r\n               type=\"text\"\r\n               autocomplete=\"off\" />\r\n\r\n        <mat-hint>\r\n            {{'messages.uniqueUsername' | locale | async}}\r\n        </mat-hint>\r\n\r\n        <mat-error *ngIf=\"form.controls.username.errors?.minlength\">\r\n            Minimum length is {{form.controls.username.errors?.minlength.requiredLength}} characters\r\n        </mat-error>\r\n\r\n        <mat-error *ngIf=\"form.controls.username.errors?.usernameInUse\">\r\n            {{'errors.usernameInUse' | locale | async}}\r\n        </mat-error>\r\n    </mat-form-field>\r\n\r\n    <hr />\r\n\r\n\r\n    <h1>\r\n        {{'en_ChangePassword' | locale | async}}\r\n    </h1>\r\n\r\n    <mat-form-field>\r\n        <mat-label>\r\n            {{'en_Password' | locale | async}}\r\n        </mat-label>\r\n        <input matInput\r\n               formControlName=\"password\"\r\n               autocomplete=\"off\"\r\n               type=\"password\" />\r\n\r\n        <mat-error *ngIf=\"form.controls.password.errors?.minlength\">\r\n            Minimum length is {{form.controls.password.errors?.minlength.requiredLength}} characters\r\n        </mat-error>\r\n    </mat-form-field>\r\n\r\n    <mat-form-field>\r\n        <mat-label>\r\n            {{'en_ConfirmPassword' | locale | async}}\r\n        </mat-label>\r\n        <input matInput\r\n               formControlName=\"confirm\"\r\n               type=\"password\"\r\n               autocomplete=\"off\"\r\n               [required]=\"form.get('password').value\" />\r\n\r\n        <mat-error *ngIf=\"form.controls.confirm.errors?.required\">\r\n            {{'errors.requiredField' | locale | async}}\r\n        </mat-error>\r\n\r\n        <mat-error *ngIf=\"form.controls.confirm.errors?.invalidPasswordMatch\">\r\n            {{'errors.passwordsDontMatch' | locale | async}}\r\n        </mat-error>\r\n\r\n        <mat-error *ngIf=\"form.controls.confirm.errors?.minlength\">\r\n            Minimum length is {{form.controls.confirm.errors?.minlength.requiredLength}} characters\r\n        </mat-error>\r\n    </mat-form-field>\r\n\r\n    <div fxLayout=\"row\"\r\n         fxLayoutGap=\"15px\"\r\n         *ngIf=\"form.dirty\">\r\n        <button mat-raised-button\r\n                class=\"mat-spinner-button\"\r\n                color=\"primary\"\r\n                type=\"submit\">\r\n            <div>\r\n                {{'en_Save' | locale | async}}\r\n            </div>\r\n            <mat-spinner diameter=\"24\"\r\n                         *ngIf=\"isSaving\"></mat-spinner>\r\n        </button>\r\n        <a mat-button\r\n           color=\"primary\"\r\n           type=\"button\"\r\n           [routerLink]=\"['/tools']\">{{'en_Cancel' | locale | async}}</a>\r\n    </div>\r\n</form>\r\n"
 
 /***/ }),
 
@@ -388,13 +388,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DetailFormComponent", function() { return DetailFormComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
-/* harmony import */ var _core_Unsubscribable__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @core/Unsubscribable */ "./src/app/core/Unsubscribable.ts");
-/* harmony import */ var _shared_confirm_password_validator__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @shared/confirm-password.validator */ "./src/app/shared/confirm-password.validator.ts");
-/* harmony import */ var _shared_entity_user_model__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @shared/entity/user.model */ "./src/app/shared/entity/user.model.ts");
-/* harmony import */ var _shared_validationUtils__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @shared/validationUtils */ "./src/app/shared/validationUtils.ts");
-/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm5/operators/index.js");
-/* harmony import */ var _core_entity_service__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @core/entity.service */ "./src/app/core/entity.service.ts");
-/* harmony import */ var _shared_entity_entity_model__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @shared/entity/entity.model */ "./src/app/shared/entity/entity.model.ts");
+/* harmony import */ var _core_entity_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @core/entity.service */ "./src/app/core/entity.service.ts");
+/* harmony import */ var _core_Unsubscribable__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @core/Unsubscribable */ "./src/app/core/Unsubscribable.ts");
+/* harmony import */ var _shared_confirm_password_validator__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @shared/confirm-password.validator */ "./src/app/shared/confirm-password.validator.ts");
+/* harmony import */ var _shared_entity_entity_model__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @shared/entity/entity.model */ "./src/app/shared/entity/entity.model.ts");
+/* harmony import */ var _shared_entity_user_model__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @shared/entity/user.model */ "./src/app/shared/entity/user.model.ts");
+/* harmony import */ var _shared_validationUtils__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @shared/validationUtils */ "./src/app/shared/validationUtils.ts");
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm5/operators/index.js");
 var __extends = (undefined && undefined.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -438,8 +438,8 @@ var DetailFormComponent = /** @class */ (function (_super) {
     DetailFormComponent.prototype.ngOnInit = function () {
         var _this = this;
         this.form = this.fb.group({
-            username: [this.model.username, _shared_validationUtils__WEBPACK_IMPORTED_MODULE_5__["ValidationUtils"].getDefaultInputValidators(_shared_validationUtils__WEBPACK_IMPORTED_MODULE_5__["htmlInputTypes"].text).concat(_angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].minLength(4))],
-            email: [this.model.email, _shared_validationUtils__WEBPACK_IMPORTED_MODULE_5__["ValidationUtils"].getDefaultInputValidators(_shared_validationUtils__WEBPACK_IMPORTED_MODULE_5__["htmlInputTypes"].email, true)],
+            username: [this.model.username, _shared_validationUtils__WEBPACK_IMPORTED_MODULE_7__["ValidationUtils"].getDefaultInputValidators(_shared_validationUtils__WEBPACK_IMPORTED_MODULE_7__["htmlInputTypes"].text).concat(_angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].minLength(4))],
+            email: [this.model.email, _shared_validationUtils__WEBPACK_IMPORTED_MODULE_7__["ValidationUtils"].getDefaultInputValidators(_shared_validationUtils__WEBPACK_IMPORTED_MODULE_7__["htmlInputTypes"].email, true)],
             password: [null],
             confirm: [null],
         });
@@ -447,11 +447,11 @@ var DetailFormComponent = /** @class */ (function (_super) {
         // this.form.get('email').disable();
         this.form.controls.password.setValidators([_angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].minLength(6)]);
         this.form.controls.password.valueChanges
-            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_6__["takeUntil"])(this.unsubscribe))
+            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_8__["takeUntil"])(this.unsubscribe))
             .subscribe(function (result) {
             if (result) {
                 _this.form.controls.confirm.setValidators([
-                    _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required, _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].minLength(6), Object(_shared_confirm_password_validator__WEBPACK_IMPORTED_MODULE_3__["confirmPasswordValidator"])('password')
+                    _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required, _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].minLength(6), Object(_shared_confirm_password_validator__WEBPACK_IMPORTED_MODULE_4__["confirmPasswordValidator"])('password')
                 ]);
             }
             else {
@@ -468,8 +468,11 @@ var DetailFormComponent = /** @class */ (function (_super) {
         if (!this.form.valid) {
             return;
         }
+        if (this.isSaving) {
+            return;
+        }
         this.isSaving = true;
-        value.entityType = _shared_entity_entity_model__WEBPACK_IMPORTED_MODULE_8__["EntityType"].Users;
+        value.entityType = _shared_entity_entity_model__WEBPACK_IMPORTED_MODULE_5__["EntityType"].Users;
         value.username = value.username || null;
         value.id = this.model.id;
         delete value.confirm;
@@ -478,6 +481,7 @@ var DetailFormComponent = /** @class */ (function (_super) {
         }
         this.entityService.update(value).subscribe(function (success) {
             _this.isSaving = false;
+            _this.onSubmit.emit();
         }, function (error) {
             _this.isSaving = false;
             if (error.error.errorCode === 40904) {
@@ -490,7 +494,7 @@ var DetailFormComponent = /** @class */ (function (_super) {
     };
     __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
-        __metadata("design:type", _shared_entity_user_model__WEBPACK_IMPORTED_MODULE_4__["User"])
+        __metadata("design:type", _shared_entity_user_model__WEBPACK_IMPORTED_MODULE_6__["User"])
     ], DetailFormComponent.prototype, "model", void 0);
     __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Output"])(),
@@ -503,10 +507,10 @@ var DetailFormComponent = /** @class */ (function (_super) {
             styles: [__webpack_require__(/*! ./detail-form.component.scss */ "./src/app/account/detail-form/detail-form.component.scss")]
         }),
         __metadata("design:paramtypes", [_angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormBuilder"],
-            _core_entity_service__WEBPACK_IMPORTED_MODULE_7__["EntityService"]])
+            _core_entity_service__WEBPACK_IMPORTED_MODULE_2__["EntityService"]])
     ], DetailFormComponent);
     return DetailFormComponent;
-}(_core_Unsubscribable__WEBPACK_IMPORTED_MODULE_2__["Unsubscribable"]));
+}(_core_Unsubscribable__WEBPACK_IMPORTED_MODULE_3__["Unsubscribable"]));
 
 
 
@@ -519,7 +523,7 @@ var DetailFormComponent = /** @class */ (function (_super) {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<header>\r\n    <mat-toolbar>\r\n        <mat-toolbar-row>\r\n            <app-sidenav-toggle></app-sidenav-toggle>\r\n        </mat-toolbar-row>\r\n        <mat-toolbar-row fxLayout=\"row\"\r\n                         fxLayoutAlign=\"center center\">\r\n            <app-npl-logo size=\"100\"></app-npl-logo>\r\n        </mat-toolbar-row>\r\n    </mat-toolbar>\r\n</header>\r\n\r\n<section fxLayout=\"row\"\r\n         fxLayoutAlign=\"center center\">\r\n\r\n    <app-detail-form [model]=\"user\"\r\n                     (submit)=\"onSubmit()\"></app-detail-form>\r\n</section>\r\n"
+module.exports = "<header>\r\n    <mat-toolbar>\r\n        <mat-toolbar-row>\r\n            <app-sidenav-toggle></app-sidenav-toggle>\r\n        </mat-toolbar-row>\r\n        <mat-toolbar-row fxLayout=\"row\"\r\n                         fxLayoutAlign=\"center center\">\r\n            <app-npl-logo size=\"100\"></app-npl-logo>\r\n        </mat-toolbar-row>\r\n    </mat-toolbar>\r\n</header>\r\n\r\n<section fxLayout=\"row\"\r\n         fxLayoutAlign=\"center center\">\r\n\r\n    <app-detail-form [model]=\"user\"\r\n                     (onSubmit)=\"onSubmit()\"></app-detail-form>\r\n</section>\r\n"
 
 /***/ }),
 
@@ -547,9 +551,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm5/material.es5.js");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
-/* harmony import */ var _core_entity_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @core/entity.service */ "./src/app/core/entity.service.ts");
-/* harmony import */ var _core_Unsubscribable__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @core/Unsubscribable */ "./src/app/core/Unsubscribable.ts");
-/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm5/operators/index.js");
+/* harmony import */ var _core_Unsubscribable__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @core/Unsubscribable */ "./src/app/core/Unsubscribable.ts");
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm5/operators/index.js");
 var __extends = (undefined && undefined.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -577,19 +580,17 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 
 
-
 var DetailComponent = /** @class */ (function (_super) {
     __extends(DetailComponent, _super);
-    function DetailComponent(route, entityService, snackBar) {
+    function DetailComponent(route, snackBar) {
         var _this = _super.call(this) || this;
         _this.route = route;
-        _this.entityService = entityService;
         _this.snackBar = snackBar;
         return _this;
     }
     DetailComponent.prototype.ngOnInit = function () {
         var _this = this;
-        this.route.data.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_5__["takeUntil"])(this.unsubscribe))
+        this.route.data.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["takeUntil"])(this.unsubscribe))
             .subscribe(function (result) {
             _this.user = result.user;
         });
@@ -604,11 +605,10 @@ var DetailComponent = /** @class */ (function (_super) {
             styles: [__webpack_require__(/*! ./detail.component.scss */ "./src/app/account/detail/detail.component.scss")]
         }),
         __metadata("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_2__["ActivatedRoute"],
-            _core_entity_service__WEBPACK_IMPORTED_MODULE_3__["EntityService"],
             _angular_material__WEBPACK_IMPORTED_MODULE_1__["MatSnackBar"]])
     ], DetailComponent);
     return DetailComponent;
-}(_core_Unsubscribable__WEBPACK_IMPORTED_MODULE_4__["Unsubscribable"]));
+}(_core_Unsubscribable__WEBPACK_IMPORTED_MODULE_3__["Unsubscribable"]));
 
 
 
@@ -1246,7 +1246,7 @@ var AppRoutingModule = /** @class */ (function () {
     AppRoutingModule = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModule"])({
             imports: [
-                _angular_router__WEBPACK_IMPORTED_MODULE_1__["RouterModule"].forRoot(maintenanceRoutes)
+                _angular_router__WEBPACK_IMPORTED_MODULE_1__["RouterModule"].forRoot(appRoutes)
             ],
             exports: [
                 _angular_router__WEBPACK_IMPORTED_MODULE_1__["RouterModule"]
@@ -1826,7 +1826,7 @@ if (window.location.host === 'dev.noplaceleft.tools') {
     _BaseUrl = window.location.protocol + '//dev-api.noplaceleft.tools/api/';
 }
 if (window.location.host === 'noplaceleft.tools') {
-    _BaseUrl = window.location.protocol + '//api.noplaceleft.tools/';
+    _BaseUrl = window.location.protocol + '//api.noplaceleft.tools/api/';
 }
 var BaseUrl = _BaseUrl;
 var EntityService = /** @class */ (function () {
@@ -4234,9 +4234,9 @@ module.exports = "/**\n * Applies styles for users in high contrast mode. Note t
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RecoverPasswordComponent", function() { return RecoverPasswordComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _core_authentication_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @core/authentication.service */ "./src/app/core/authentication.service.ts");
-/* harmony import */ var _core_Unsubscribable__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @core/Unsubscribable */ "./src/app/core/Unsubscribable.ts");
-/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
+/* harmony import */ var _core_authentication_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @core/authentication.service */ "./src/app/core/authentication.service.ts");
+/* harmony import */ var _core_Unsubscribable__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @core/Unsubscribable */ "./src/app/core/Unsubscribable.ts");
 /* harmony import */ var _shared_validationUtils__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @shared/validationUtils */ "./src/app/shared/validationUtils.ts");
 var __extends = (undefined && undefined.__extends) || (function () {
     var extendStatics = function (d, b) {
@@ -4287,7 +4287,7 @@ var RecoverPasswordComponent = /** @class */ (function (_super) {
                 _this.isLoading = false;
             }, function (error) {
                 _this.isLoading = false;
-                if (error.errorCode === 40407) {
+                if (error.error.errorCode === 40407) {
                     _this.form.controls.email.setErrors({ noMatch: error.error.message });
                 }
             });
@@ -4299,11 +4299,11 @@ var RecoverPasswordComponent = /** @class */ (function (_super) {
             template: __webpack_require__(/*! ./recover-password.component.html */ "./src/app/home/recover-password/recover-password.component.html"),
             styles: [__webpack_require__(/*! ./recover-password.component.scss */ "./src/app/home/recover-password/recover-password.component.scss")]
         }),
-        __metadata("design:paramtypes", [_angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormBuilder"],
-            _core_authentication_service__WEBPACK_IMPORTED_MODULE_1__["AuthenticationService"]])
+        __metadata("design:paramtypes", [_angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormBuilder"],
+            _core_authentication_service__WEBPACK_IMPORTED_MODULE_2__["AuthenticationService"]])
     ], RecoverPasswordComponent);
     return RecoverPasswordComponent;
-}(_core_Unsubscribable__WEBPACK_IMPORTED_MODULE_2__["Unsubscribable"]));
+}(_core_Unsubscribable__WEBPACK_IMPORTED_MODULE_3__["Unsubscribable"]));
 
 
 
@@ -4652,7 +4652,7 @@ var SignupComponent = /** @class */ (function (_super) {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div mat-dialog-title>\r\n    <ng-container *ngIf=\"data.isFeedback; then feedbackTemp else helpTemp\"></ng-container>\r\n    <ng-template #feedbackTemp>\r\n        {{'en_SendFeedback' | locale | async}}\r\n    </ng-template>\r\n    <ng-template #helpTemp>\r\n        {{'en_NeedHelp' | locale | async}}\r\n    </ng-template>\r\n</div>\r\n<div mat-dialog-content>\r\n\r\n    <form fxLayout=\"column\"\r\n          fxLayoutGap=\"24px\"\r\n          [formGroup]=\"form\">\r\n\r\n        <ng-container *ngIf=\"!data.authenticated\">\r\n            <mat-form-field>\r\n                <mat-label>\r\n                    {{'en_Name' | locale | async}}\r\n                </mat-label>\r\n                <input matInput\r\n                       formControlName=\"name\" />\r\n            </mat-form-field>\r\n\r\n            <mat-form-field>\r\n                <mat-label>\r\n                    {{'en_Email' | locale | async}}\r\n                </mat-label>\r\n                <input matInput\r\n                       required\r\n                       formControlName=\"email\" />\r\n\r\n                <mat-error *ngIf=\"form.controls.email.errors?.pattern\">\r\n                    {{'errors.emailFormat' | locale | async}}\r\n                </mat-error>\r\n\r\n                <mat-error *ngIf=\"form.controls.email.errors?.required\">\r\n                    {{'errors.requiredField' | locale | async}}\r\n                </mat-error>\r\n            </mat-form-field>\r\n        </ng-container>\r\n\r\n        <mat-form-field>\r\n            <textarea matInput\r\n                      required\r\n                      formControlName=\"content\"\r\n                      placeholder=\"{{data.isFeedback ? 'Feedback' : 'How can we help you?'}}\"\r\n                      cdkTextareaAutosize\r\n                      cdkAutosizeMinRows=\"2\"\r\n                      cdkAutosizeMaxRows=\"30\"></textarea>\r\n\r\n            <mat-error *ngIf=\"form.controls.content.errors?.required\">\r\n                {{'errors.requiredField' | locale | async}}\r\n            </mat-error>\r\n        </mat-form-field>\r\n    </form>\r\n\r\n    <p>\r\n        {{'messages.orSendEmailTo' | locale | async}}:\r\n    </p>\r\n    <ng-container *ngIf=\"data.isFeedback; then feedbackEmail else supportEmail\"></ng-container>\r\n\r\n    <ng-template #feedbackEmail>\r\n        <pre><code>feedback@noplaceleft.tools</code></pre>\r\n    </ng-template>\r\n\r\n    <ng-template #supportEmail>\r\n        <pre><code>support@noplaceleft.tools</code></pre>\r\n    </ng-template>\r\n</div>\r\n\r\n<div mat-dialog-actions\r\n     fxLayoutAlign=\"end\"\r\n     fxLayoutGap=\"25px\">\r\n\r\n    <button mat-raised-button\r\n            color=\"primary\"\r\n            type=\"button\"\r\n            (click)=\"onSubmit()\">\r\n        {{'en_Send' | locale | async}}\r\n    </button>\r\n\r\n    <button mat-button\r\n            color=\"primary\"\r\n            mat-dialog-close>\r\n        {{'en_Cancel' | locale | async}}\r\n    </button>\r\n</div>\r\n"
+module.exports = "<div mat-dialog-title>\r\n    <ng-container *ngIf=\"data.isFeedback; then feedbackTemp else helpTemp\"></ng-container>\r\n    <ng-template #feedbackTemp>\r\n        {{'en_SendFeedback' | locale | async}}\r\n    </ng-template>\r\n    <ng-template #helpTemp>\r\n        {{'en_NeedHelp' | locale | async}}\r\n    </ng-template>\r\n</div>\r\n<div mat-dialog-content>\r\n\r\n    <form fxLayout=\"column\"\r\n          fxLayoutGap=\"24px\"\r\n          [formGroup]=\"form\">\r\n\r\n        <ng-container *ngIf=\"!data.authenticated\">\r\n            <mat-form-field>\r\n                <mat-label>\r\n                    {{'en_Name' | locale | async}}\r\n                </mat-label>\r\n                <input matInput\r\n                       formControlName=\"name\" />\r\n            </mat-form-field>\r\n\r\n            <mat-form-field>\r\n                <mat-label>\r\n                    {{'en_Email' | locale | async}}\r\n                </mat-label>\r\n                <input matInput\r\n                       required\r\n                       formControlName=\"email\" />\r\n\r\n                <mat-error *ngIf=\"form.controls.email.errors?.pattern\">\r\n                    {{'errors.emailFormat' | locale | async}}\r\n                </mat-error>\r\n\r\n                <mat-error *ngIf=\"form.controls.email.errors?.required\">\r\n                    {{'errors.requiredField' | locale | async}}\r\n                </mat-error>\r\n            </mat-form-field>\r\n        </ng-container>\r\n\r\n        <mat-form-field>\r\n            <textarea matInput\r\n                      required\r\n                      formControlName=\"content\"\r\n                      placeholder=\"{{data.isFeedback ? 'Feedback' : 'How can we help you?'}}\"\r\n                      cdkTextareaAutosize\r\n                      cdkAutosizeMinRows=\"2\"\r\n                      cdkAutosizeMaxRows=\"30\"></textarea>\r\n\r\n            <mat-error *ngIf=\"form.controls.content.errors?.required\">\r\n                {{'errors.requiredField' | locale | async}}\r\n            </mat-error>\r\n        </mat-form-field>\r\n    </form>\r\n\r\n    <p>\r\n        {{'messages.orSendEmailTo' | locale | async}}:\r\n    </p>\r\n    <ng-container *ngIf=\"data.isFeedback; then feedbackEmail else supportEmail\"></ng-container>\r\n\r\n    <ng-template #feedbackEmail>\r\n        <pre><code>feedback@noplaceleft.tools</code></pre>\r\n    </ng-template>\r\n\r\n    <ng-template #supportEmail>\r\n        <pre><code>support@noplaceleft.tools</code></pre>\r\n    </ng-template>\r\n</div>\r\n\r\n<div mat-dialog-actions\r\n     fxLayoutAlign=\"end\"\r\n     fxLayoutGap=\"25px\">\r\n\r\n    <button mat-raised-button\r\n            class=\"mat-spinner-button\"\r\n            color=\"primary\"\r\n            type=\"button\"\r\n            (click)=\"onSubmit()\">\r\n        <div>\r\n            {{'en_Send' | locale | async}}\r\n        </div>\r\n        <mat-spinner *ngIf=\"isLoading\"\r\n                     diameter=\"24\"></mat-spinner>\r\n    </button>\r\n\r\n    <button mat-button\r\n            color=\"primary\"\r\n            mat-dialog-close>\r\n        {{'en_Cancel' | locale | async}}\r\n    </button>\r\n</div>\r\n"
 
 /***/ }),
 
@@ -4717,6 +4717,10 @@ var SupportDialogComponent = /** @class */ (function () {
     SupportDialogComponent.prototype.sendSupport = function () {
         var _this = this;
         var req;
+        if (this.isLoading) {
+            return;
+        }
+        this.isLoading = true;
         if (this.data.isFeedback) {
             req = this.supportService.sendFeedback(this.form.value);
         }
@@ -4724,6 +4728,7 @@ var SupportDialogComponent = /** @class */ (function () {
             req = this.supportService.sendSupport(this.form.value);
         }
         req.subscribe(function (result) {
+            _this.isLoading = false;
             _this.dialogRf.close();
         });
     };
