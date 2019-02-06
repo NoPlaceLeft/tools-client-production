@@ -6541,7 +6541,7 @@ var GenMapperGraphComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<ng-container *ngIf=\"isLoading;\">\n    <div class=\"map-loading\">\n        <mat-spinner diameter=\"48\"\n                     color=\"primary\"></mat-spinner>\n        <h1>Locating ({{locatingCount}}) Addresses</h1>\n    </div>\n</ng-container>\n\n<agm-map [latitude]=\"latitude\"\n         [longitude]=\"longitude\"\n         [zoom]=\"zoom\"\n         [disableDefaultUI]=\"true\"\n         [streetViewControl]=\"false\">\n    <ng-container *ngFor=\"let marker of markers\">\n        <agm-marker [latitude]=\"marker.lat\"\n                    [longitude]=\"marker.lng\"\n                    (markerClick)=\"markerClick(marker)\">\n        </agm-marker>\n    </ng-container>\n</agm-map>\n"
+module.exports = "<ng-container *ngIf=\"isLoading;\">\r\n    <div class=\"map-loading\">\r\n        <mat-spinner diameter=\"48\"\r\n                     color=\"primary\"></mat-spinner>\r\n        <h1>Locating ({{locatingCount}}) Addresses</h1>\r\n    </div>\r\n</ng-container>\r\n\r\n<agm-map [latitude]=\"latitude\"\r\n         [longitude]=\"longitude\"\r\n         [zoom]=\"zoom\"\r\n         [disableDefaultUI]=\"true\"\r\n         [streetViewControl]=\"false\">\r\n    <ng-container *ngFor=\"let marker of markers\">\r\n        <agm-marker [latitude]=\"marker.lat\"\r\n                    [longitude]=\"marker.lng\"\r\n                    (markerClick)=\"markerClick(marker)\">\r\n        </agm-marker>\r\n    </ng-container>\r\n</agm-map>\r\n"
 
 /***/ }),
 
@@ -6752,7 +6752,7 @@ var GenMapperMapComponent = /** @class */ (function (_super) {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<ng-container *ngIf=\"activeTab.view === viewTypes.GoogleMap; then goToGenMap else goToGoogleMap\"></ng-container>\n\n<ng-template #goToGoogleMap>\n    <button mat-icon-button\n            color=\"default\"\n            (click)=\"selectTab(viewTypes.GoogleMap)\">\n        <mat-icon>place</mat-icon>\n    </button>\n</ng-template>\n<ng-template #goToGenMap>\n    <button mat-mini-fab\n            color=\"default\"\n            (click)=\"selectTab(viewTypes.GenMap)\">\n        <mat-icon>arrow_back</mat-icon>\n    </button>\n</ng-template>\n"
+module.exports = "<ng-container *ngIf=\"activeTab.view === viewTypes.GoogleMap; then goToGenMap else goToGoogleMap\"></ng-container>\r\n\r\n<ng-template #goToGoogleMap>\r\n    <button mat-icon-button\r\n            color=\"default\"\r\n            (click)=\"selectTab(viewTypes.GoogleMap)\">\r\n        <mat-icon>place</mat-icon>\r\n    </button>\r\n</ng-template>\r\n<ng-template #goToGenMap>\r\n    <button mat-mini-fab\r\n            color=\"default\"\r\n            (click)=\"selectTab(viewTypes.GenMap)\">\r\n        <mat-icon>arrow_back</mat-icon>\r\n    </button>\r\n</ng-template>\r\n"
 
 /***/ }),
 
