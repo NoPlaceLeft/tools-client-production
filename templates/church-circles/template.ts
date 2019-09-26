@@ -477,7 +477,7 @@ export const ChurchCirclesTemplate: GMTemplate = {
             },
         },
         {
-            header: 'elementWord',
+            header: 'elementPrayer',
             initial: false,
             type: 'checkbox',
             canModify: true,
@@ -489,13 +489,12 @@ export const ChurchCirclesTemplate: GMTemplate = {
                     'y': boxHeight * 0.1,
                     'width': boxHeight / 4,
                     'height': boxHeight / 4,
-                    'xlink:href': 'templates/church-circles/icons/element-word.png'
+                    'xlink:href': 'templates/church-circles/icons/element-prayer.png'
                 }
             },
-
         },
         {
-            header: 'elementPrayer',
+            header: 'elementMakeDisciples',
             initial: false,
             type: 'checkbox',
             canModify: true,
@@ -507,43 +506,9 @@ export const ChurchCirclesTemplate: GMTemplate = {
                     'y': boxHeight * 0.1,
                     'width': boxHeight / 4,
                     'height': boxHeight / 4,
-                    'xlink:href': 'templates/church-circles/icons/element-prayer.png'
-                }
-            },
-        },
-        {
-            header: 'elementLordsSupper',
-            initial: false,
-            type: 'checkbox',
-            canModify: true,
-            canModifyVisibility: false,
-            svg: {
-                'type': 'image',
-                'attributes': {
-                    'x': -boxHeight * 0.4,
-                    'y': boxHeight * 0.375,
-                    'width': boxHeight / 4,
-                    'height': boxHeight / 4,
-                    'xlink:href': 'templates/church-circles/icons/element-lords-supper.png'
+                    'xlink:href': 'templates/church-circles/icons/element-make-disciples.png'
                 }
             }
-        },
-        {
-            header: 'elementGive',
-            initial: false,
-            type: 'checkbox',
-            canModify: true,
-            canModifyVisibility: false,
-            svg: {
-                'type': 'image',
-                'attributes': {
-                    'x': -boxHeight * 0.125,
-                    'y': boxHeight * 0.375,
-                    'width': boxHeight / 4,
-                    'height': boxHeight / 4,
-                    'xlink:href': 'templates/church-circles/icons/element-give.png'
-                }
-            },
         },
         {
             header: 'elementLove',
@@ -554,7 +519,7 @@ export const ChurchCirclesTemplate: GMTemplate = {
             svg: {
                 'type': 'image',
                 'attributes': {
-                    'x': boxHeight * 0.15,
+                    'x': -boxHeight * 0.4,
                     'y': boxHeight * 0.375,
                     'width': boxHeight / 4,
                     'height': boxHeight / 4,
@@ -571,8 +536,8 @@ export const ChurchCirclesTemplate: GMTemplate = {
             svg: {
                 'type': 'image',
                 'attributes': {
-                    'x': -boxHeight * 0.4,
-                    'y': boxHeight * 0.65,
+                    'x': -boxHeight * 0.125,
+                    'y': boxHeight * 0.375,
                     'width': boxHeight / 4,
                     'height': boxHeight / 4,
                     'xlink:href': 'templates/church-circles/icons/element-worship.png'
@@ -580,7 +545,41 @@ export const ChurchCirclesTemplate: GMTemplate = {
             }
         },
         {
-            header: 'elementLeaders',
+            header: 'elementLordsSupper',
+            initial: false,
+            type: 'checkbox',
+            canModify: true,
+            canModifyVisibility: false,
+            svg: {
+                'type': 'image',
+                'attributes': {
+                    'x': boxHeight * 0.15,
+                    'y': boxHeight * 0.375,
+                    'width': boxHeight / 4,
+                    'height': boxHeight / 4,
+                    'xlink:href': 'templates/church-circles/icons/element-lords-supper.png'
+                }
+            }
+        },
+        {
+            header: 'elementGive',
+            initial: false,
+            type: 'checkbox',
+            canModify: true,
+            canModifyVisibility: false,
+            svg: {
+                'type': 'image',
+                'attributes': {
+                    'x': -boxHeight * 0.4,
+                    'y': boxHeight * 0.65,
+                    'width': boxHeight / 4,
+                    'height': boxHeight / 4,
+                    'xlink:href': 'templates/church-circles/icons/element-give.png'
+                }
+            },
+        },
+        {
+            header: 'elementWord',
             initial: false,
             type: 'checkbox',
             canModify: true,
@@ -592,12 +591,13 @@ export const ChurchCirclesTemplate: GMTemplate = {
                     'y': boxHeight * 0.65,
                     'width': boxHeight / 4,
                     'height': boxHeight / 4,
-                    'xlink:href': 'templates/church-circles/icons/element-leaders.png'
+                    'xlink:href': 'templates/church-circles/icons/element-word.png'
                 }
-            }
+            },
+
         },
         {
-            header: 'elementMakeDisciples',
+            header: 'elementLeaders',
             initial: false,
             type: 'checkbox',
             canModify: true,
@@ -609,7 +609,7 @@ export const ChurchCirclesTemplate: GMTemplate = {
                     'y': boxHeight * 0.65,
                     'width': boxHeight / 4,
                     'height': boxHeight / 4,
-                    'xlink:href': 'templates/church-circles/icons/element-make-disciples.png'
+                    'xlink:href': 'templates/church-circles/icons/element-leaders.png'
                 }
             }
         },
@@ -641,6 +641,13 @@ export const ChurchCirclesTemplate: GMTemplate = {
                     'letter-spacing': '0.35em'
                 }
             }
+        },
+        {
+            header: 'note',
+            initial: '',
+            type: 'textarea',
+            canModify: true,
+            canModifyVisibility: true,
         }
     ],
     translations: {
@@ -688,6 +695,7 @@ export const ChurchCirclesTemplate: GMTemplate = {
                     'threeThirdsBibleTeaching': 'Bible Teaching',
                     'threeThirdsPractice': 'Practice',
                     'threeThirdsGoalSetting': 'Goal Setting & Commission',
+                    'note': 'Note'
                 }
             }
         },
@@ -735,6 +743,7 @@ export const ChurchCirclesTemplate: GMTemplate = {
                     'threeThirdsBibleTeaching': 'Bible Teaching',
                     'threeThirdsPractice': 'Practice',
                     'threeThirdsGoalSetting': 'Goal Setting & Commission',
+                    'note': 'Hinweis',
                 }
             }
         },
@@ -782,6 +791,7 @@ export const ChurchCirclesTemplate: GMTemplate = {
                     'threeThirdsBibleTeaching': 'Bible Teaching',
                     'threeThirdsPractice': 'Practice',
                     'threeThirdsGoalSetting': 'Goal Setting & Commission',
+                    'note': 'Nota',
                 }
             }
         },
@@ -829,6 +839,7 @@ export const ChurchCirclesTemplate: GMTemplate = {
                     'threeThirdsBibleTeaching': 'Bible',
                     'threeThirdsPractice': 'Procvičování',
                     'threeThirdsGoalSetting': 'Akční kroky a modlitba',
+                    'note': 'Poznámka',
                 }
             }
         },
@@ -876,6 +887,7 @@ export const ChurchCirclesTemplate: GMTemplate = {
                     'threeThirdsBibleTeaching': 'បង្រៀនព្រះគម្ពីរ',
                     'threeThirdsPractice': 'អនុវត្ត',
                     'threeThirdsGoalSetting': 'ការកំណត់គោលដៅ & គណៈកម្មការ',
+                    'note': 'ಸೂಚನೆ',
                 }
             }
         }
