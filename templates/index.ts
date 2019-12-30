@@ -1,57 +1,35 @@
-import { ChurchCirclesCzechTemplate } from './church-circles-czech/template';
+import { ChurchCircles12Configuration } from './church-circles-12/configuration-new';
 import { ChurchCircles12Template } from './church-circles-12/template';
-import { ChurchCirclesTemplate } from './church-circles/template';
-import { DisciplesTemplate } from './disciples/template';
-import { FourFieldsTemplate } from './four-fields/template';
-import {
-    GMField,
-    GMReport,
-    GMReportValue,
-    GMSettings,
-    GMStreamAttribute,
-    GMSvg,
-    GMSvgSet,
-    GMTemplate,
-    GMTemplateAttribute,
-    GMTemplateReport,
-} from './template.interface';
+import { ChurchCirclesConfiguration } from './church-circles/configuration-new';
+import { ChurchCirclesDefaultTemplate } from './church-circles/template';
 import { translations } from './translations';
+import { ChurchCirclesCzechConfiguration } from './church-circles-czech/configuration-new';
+import { ChurchCirclesCzechTemplate } from './church-circles-czech/template';
+export * from './countries';
+export * from './template.interface';
 
+export { GenMapperConfigs, GenMapperTemplates, translations };
 
 const GenMapperTemplates = [
-    ChurchCirclesTemplate,
-    ChurchCirclesCzechTemplate,
+    ChurchCirclesDefaultTemplate,
     ChurchCircles12Template,
-    FourFieldsTemplate,
-    DisciplesTemplate,
-    // MovementeerTemplate
+    ChurchCirclesCzechTemplate
+    // ChurchCirclesEastTemplate,
 ];
 
-GenMapperTemplates.forEach(processTemplate);
+const GenMapperConfigs = [
+    ChurchCirclesConfiguration,
+    ChurchCircles12Configuration,
+    ChurchCirclesCzechConfiguration
+    // ChurchCirclesEastConfiguration
+];
 
-export {
-    GenMapperTemplates,
-    translations,
-    GMTemplate,
-    GMSvg,
-    GMSettings,
-    GMSvgSet,
-    GMStreamAttribute,
-    GMTemplateAttribute,
-    GMField,
-    GMReport,
-    GMTemplateReport,
-    GMReportValue
-};
-
-function processTemplate(template: GMTemplate): void {
-    template.fields.forEach(field => {
-        field.i18nRef = template.format + '.' + field.header;
-
-        if (field.values) {
-            field.values.forEach(value => {
-                value.i18nRef = template.format + '.' + value.header;
-            });
-        }
-    });
+export const GMTemplates = {
+    ChurchCirclesDefaultTemplate,
+    ChurchCircles12Template,
+    ChurchCirclesCzechTemplate
 }
+
+
+// Remove
+export interface GMStreamAttribute { }
